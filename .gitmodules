@@ -1,0 +1,7 @@
+[submodule "extras/birtconn"]
+	path = extras/birtconn
+	url = https://github.com/phuihock/birtconn.git
+[submodule "odoo"]
+	path = odoo
+	url = https://github.com/OCA/OCB.git
+	branch = 7.0
