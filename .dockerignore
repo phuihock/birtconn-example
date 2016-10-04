@@ -1,0 +1,4 @@
+*/*/.git
+*/*/*.py[co]
+extras/birtconn/src
+extras/birtconn/target

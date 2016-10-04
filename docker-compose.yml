@@ -1,0 +1,45 @@
+version: '2'
+networks:
+  br-birtconn-example:
+    driver: bridge
+
+services:
+  postgres:
+    image: postgres:9.3
+    environment:
+      - POSTGRES_DB=odoo
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=passwd
+    networks:
+      - br-birtconn-example
+
+  birtconn:
+    image: phuihock/birtconn:161004.2300
+    environment:
+      - BIRT_REPORTS=/opt/main/extras
+      - DB_NAME=odoo
+      - DB_PASS=passwd
+      - DB_HOST=db
+      - DB_PORT=5432
+    networks:
+      - br-birtconn-example
+    volumes_from:
+      - openerp:ro
+
+  openerp:
+    build:
+      context: .
+    image: phuihock/odoo7:161005.0004
+    command: -i report_birt
+    links:
+      - postgres:db
+    networks:
+      - br-birtconn-example
+    ports:
+      - "8069:8069"
+    volumes:
+      - /opt/main/odoo/addons/web/static
+      - /opt/main/extras
+      - ${CONF}/openerp-server.conf:/opt/main/conf/openerp-server.conf
+      - ${HOME}/birtconn/share:/opt/main/share
+      - ./extras/birtconn:/opt/main/extras/birtconn

@@ -1,0 +1,12 @@
+--- a/odoo/openerp/cli/server.py	2016-03-25 13:45:46.717967998 +0800
++++ b/odoo/openerp/cli/server.py	2016-03-25 14:35:06.489753113 +0800
+@@ -52,8 +52,7 @@
+     if os.name == 'posix':
+         import pwd
+         if pwd.getpwuid(os.getuid())[0] == 'root' :
+-            sys.stderr.write("Running as user 'root' is a security risk, aborting.\n")
+-            sys.exit(1)
++            pass
+ 
+ def check_postgres_user():
+     """ Exit if the configured database user is 'postgres'.

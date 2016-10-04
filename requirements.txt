@@ -1,0 +1,36 @@
+Babel==2.2.0
+Jinja2==2.8
+Mako==1.0.3
+MarkupSafe==0.23
+# Pillow==3.1.1
+PyWebDAV==0.9.4.1
+PyYAML==3.11
+Werkzeug==0.11.4
+docutils==0.12
+feedparser==5.2.1
+funcsigs==0.4
+gdata==2.0.18
+http://download.gna.org/pychart/PyChart-1.39.tar.gz
+linecache2==1.0.0
+# lxml==3.5.0
+mock==1.3.0
+nose2==0.6.2
+pbr==1.8.1
+# psutil==4.0.0
+# psycopg2==2.6.1
+pydot==1.0.2
+pyparsing==2.1.0
+python-dateutil==1.5
+# python-ldap==2.4.25
+# python-openid==2.2.5
+python-stdnum==1.3
+pytz==2015.7
+# reportlab==3.3.0
+requests==2.9.1
+simplejson==3.8.2
+six==1.10.0
+traceback2==1.4.0
+unittest2==1.1.0
+vatnumber==1.2
+vobject==0.9.1
+xlwt==1.0.0
