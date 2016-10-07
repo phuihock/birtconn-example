@@ -27,8 +27,6 @@ services:
       - openerp:ro
 
   openerp:
-    build:
-      context: .
     image: phuihock/odoo7:161005.0004
     command: -i report_birt
     links:
