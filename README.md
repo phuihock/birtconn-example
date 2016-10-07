@@ -4,9 +4,10 @@ This is an example project to show how to work with birtconn, an open source BIR
 
 To see birtconn in action, please follow the following steps:
 
-1. `git clone` this project
+1. Run `git clone` this project
+1. Run `git submodule update --init extras/birtconn` to initialize birtconn submodule
 1. Run `CONF=./conf docker-compose up`
-1. Go to http://localhost:8069 and create a new database with demo data, say `test`
+1. Go to *http://localhost:8069* and create a new database with demo data, say `test`
 1. Login as user *admin*
 1. Go to *Settings* and grant yourself permission to perform *Technical Features*
 1. Install *report_birt* addon
